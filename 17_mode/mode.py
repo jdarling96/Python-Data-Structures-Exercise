@@ -11,3 +11,14 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    counter = 0
+    num = nums[0]
+
+    for i in nums:
+        curr_frequency = nums.count(i)
+        if(curr_frequency > counter):
+            counter = curr_frequency
+            num = i
+
+    return num        
+
