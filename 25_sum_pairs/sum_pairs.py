@@ -3,7 +3,7 @@ def sum_pairs(nums, goal):
 
     For example:
 
-        >>> sum_pairs([1, 2, 2, 10], 4)
+        >>> sum_pairs([1, 2, 2, 10],4 )
         (2, 2)
 
     (4, 2) sum to 6, and come before (5, 1):
@@ -21,14 +21,16 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
-     already_visited = set()
+    already_visited = set()
 
-     for i in nums:
-         difference = goal - i
+    for i in nums:
+        difference = goal - i
+        #print(difference)
 
         if difference in already_visited:
             return (difference, i)
 
         already_visited.add(i)
+        print(already_visited)
 
     return ()
